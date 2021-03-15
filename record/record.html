@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="record.css" />
+    <title>Record</title>
+  </head>
+  <body>
+    <div class="buttonContainer">
+		<!-- <div id="copyButton" class="optButton">复制</div> -->
+		<div id="queryButton" class="optButton">查询</div><div id="clearButton" class="optButton">清空</div>
+	</div>
+    <table id="datagrid">
+		<tr style="height:30px;">
+			<th style="width:40px;">#</th>
+			<th>URL</th>
+			<th style="width:150px;">创建时间</th>
+			<th style="width:60px;">下载</th>
+			<th style="width:60px;">删除</th>
+		</tr>
+		
+		<!-- <tr id="noContent" style="display:table-row;"> -->
+			<!-- <td style="height:400px;margin:0 auto;border-left:solid 1px red;border-top:solid 1px red;"  colspan=5> -->
+				<!-- <div style="text-align:center;font-size:72px;">没有数据!</div> -->
+			<!-- </td> -->
+		<!-- </tr> -->
+	
+      <!-- <tr class="rowDiv"> -->
+        <!-- <td style="text-align:right;">2</td> -->
+        <!-- <td style="position:relative;white-space:nowrap;overflow:hidden;"><div class="showURL" >https://www.xxx.com/sadfasdfa/1000kb/hls/index.m3u8</div></td> -->
+        <!-- <td style="text-align:center;white-space:nowrap;overflow:hidden;">2020-09-06 20:01:23:023</td> -->
+        <!-- <td> -->
+          <!-- <div  class="removeButton" id="dwo" onclick="downloadOpt()">下载</div> -->
+        <!-- </td> -->
+		<!-- <td> -->
+          <!-- <div  class="removeButton">删除</div> -->
+        <!-- </td> -->
+      <!-- </tr> -->
+	  
+	  <!-- <tr class="rowDiv"> -->
+        <!-- <td style="text-align:right;">1</td> -->
+        <!-- <td style="position:relative;"><div class="showURL" >https://www.xxx.com/sadfasdfa/1000kb/hls/index.m3u8https://www.xxx.com/sadfasdfa/1000kb/hls/index.m3u8https://www.xxx.com/sadfasdfa/1000kb/hls/index.m3u8https://www.xxx.com/sadfasdfa/1000kb/hls/index.m3u8https://www.xxx.com/sadfasdfa/1000kb/hls/index.m3u8</div></td> -->
+        <!-- <td style="text-align:center;">2020-09-06 20:01:00</td> -->
+        <!-- <td> -->
+          <!-- <div class="removeButton">删除</div> -->
+        <!-- </td> -->
+      <!-- </tr> -->
+	  
+      <!-- <tr class="rowDiv"> -->
+        <!-- <td style="text-align:right;">3</td> -->
+		<!-- <td style="overflow:hidden;position:relative;"><div style="position:absolute;left:0px;top:0px;white-space:nowrap;">https://www.xxx.com/sadfasdfa/1000kb/hls/index.m3u8</div></td> -->
+        <!-- <td style="text-align:center;">2020-09-07 23:01:00</td> -->
+        <!-- <td><div class="removeButton">删除</div></td> -->
+      <!-- </tr> -->
+    </table>
+	<div id="noContentContainer" style="border-left:red 1px solid;border-right:1px red solid;border-bottom:1px red solid;">
+		<div id="noContent" style="font-size:72px;height:100px;display:inline-block;width:360px;text-align:center;">没有数据!</div>
+	</div>
+	<textarea id="copyContent" style="top:-99999px;position:absolute;opacity:0.0;width:1px;height:1px;"></textarea>
+    <script src="record.js"></script>
+
+  </body>
+</html>

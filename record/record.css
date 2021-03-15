@@ -1,0 +1,112 @@
+html, body,div {
+  padding: 0;
+  margin: 0;
+}
+
+.buttonContainer{
+	margin:0 auto;
+	width:300px;
+	height:100px;
+}
+
+.optButton{
+	background-color: #4CAF50; /* Green */
+	width:60px;
+    color: white;
+    font-size: 24px;
+	border-radius:4px;
+	display:inline-block;
+	margin:30px 0px 0px 60px;
+	text-align:center;
+	-webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+.optButton:hover{
+	background-color:#90EE90;
+	color:red;
+	cursor: pointer;
+}
+.optButton:active{
+	background-color:#73fc80;
+}
+
+.rowDiv {
+  font-size: 24px;
+  text-align: left;
+}
+
+.showURL{
+	width:100%;
+	position:absolute;
+	left:0px;
+	top:0px;
+	white-space:nowrap;
+	overflow:hidden;
+}
+/* 鼠标移动显示隐藏内容 */
+.showURL:hover{
+	background-color:#90EE90;
+	overflow:visible;
+	white-space:normal;
+	word-break:break-all;
+	height: auto;
+	z-index:1;
+	/* height:200px; */
+	/* overflow-y:auto; */
+}
+
+.removeButton{
+	background-color: #4CAF50;
+	color: white;
+	width: 60px;
+    font-size: 24px;
+	border-radius:4px;
+	text-align:center;
+	display:inline-block;
+	-webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+.removeButton:hover{
+	background-color:#90EE90;
+	color:red;
+	cursor: pointer;
+}
+
+.removeButton:active{
+	background-color:#73fc80;
+}
+
+table {
+	width:100%;
+	border-right:solid 1px red;
+	border-bottom:solid 1px red;
+	border-collapse:collapse;
+}
+th{
+	padding:0;
+	border-left:solid 1px red;
+	border-top:solid 1px red;
+}
+td{
+	padding:0;
+	border-left:solid 1px red;
+	border-top:solid 1px red;
+}
+
+td>a{
+	text-decoration:none;
+}
+/* td:hover { */
+	/* background-color: red; */
+  /* 鼠标移动显示隐藏内容 */
+    /* overflow: visible; */
+	/* white-space: normal; */
+	/* word-break: break-all; */
+	/* height: auto; */
+/* } */

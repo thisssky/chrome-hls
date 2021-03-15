@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HLS</title>
+	<style type="text/css">
+		.hlswsdiv{
+			width:34px;
+			height:24px;
+			background-image:url(ws16.png);
+			background-repeat:no-repeat;
+			background-position:center;
+			cursor:pointer;
+		}
+		.hlswsdiv:hover{
+			background-image:url(ws32.png);
+			<!-- background-color:#DCDCDC; -->
+		}
+	</style>
+  </head>
+  <body>
+    
+		<!-- <div> -->
+		<video id="video1"  width="600" src="https://cloud189-shzh-corp.oos-gdsz.ctyunapi.cn/3dee65ba-3cea-415d-821c-416120b2ed6f?response-content-disposition=attachment%3Bfilename%3D%22%C3%A5%C2%B0%C2%91%C3%A5%C2%B9%C2%B4%C3%A8%C2%B0%C2%A2%C3%A5%C2%B0%C2%94%C3%A9%C2%A1%C2%BFS04E01.mp4%22&x-amz-CLIENTNETWORK=UNKNOWN&x-amz-CLOUDTYPEIN=CORP&x-amz-CLIENTTYPEIN=UNKNOWN&Signature=GWSNvufgaBDY8P8X8sVJTcF5fp0%3D&AWSAccessKeyId=4549320003c8aac9538f&Expires=1607416468&x-amz-limitrate=102400&response-content-type=video/mp4&x-amz-FSIZE=271326229&x-amz-UID=172982920492925&x-amz-UFID=81370311992248589"></video>
+		<!-- </div> -->
+	
+	<div><button onclick="playPause()">播放/暂停</button></div>
+	<div id="hlsws" class="hlswsdiv" title="适应窗口"></div>
+
+	<script type="text/javascript">
+	var myVideo=document.getElementById("video1");
+	function playPause(){
+		if (myVideo.paused) {
+		  myVideo.play();
+		}else{
+		  myVideo.pause();
+		}
+	}
+		
+	function GetElCoordinate(e){
+		var t = e.offsetTop;
+		var l = e.offsetLeft;
+		var w = e.offsetWidth;
+		var h = e.offsetHeight;
+		while (e = e.offsetParent)
+		{
+			t += e.offsetTop;
+			l += e.offsetLeft;
+		}
+		return {
+			top: t,
+			left: l,
+			width: w,
+			height: h,
+			bottom: t + h,
+			right: l + w
+		}
+	}
+
+	var svideo=document.getElementById("video1");
+	var p = GetElCoordinate(svideo);
+	console.log(p);
+	document.getElementById("hlsws").style.position = "absolute";
+	document.getElementById("hlsws").style.display = "inline";
+	document.getElementById("hlsws").style.zIndex = 1;
+	document.getElementById("hlsws").style.left = parseInt(p.left+p.width-34)+"px";
+	document.getElementById("hlsws").style.top = parseInt(p.top)+"px";
+		
+	document.getElementById("hlsws").addEventListener("click", function(){
+		document.getElementById("video1").width = document.body.clientWidth;
+		//document.getElementById("video1").height = document.body.clientHeight;
+		setHLSWSPosition();
+	});
+	
+	function setHLSWSPosition(){
+		var svideo=document.getElementById("video1");
+		var p = GetElCoordinate(svideo);
+		console.log(p);
+		document.getElementById("hlsws").style.position = "absolute";
+		document.getElementById("hlsws").style.display = "inline";
+		document.getElementById("hlsws").style.zIndex = 1;
+		document.getElementById("hlsws").style.left = parseInt(p.left+p.width-34)+"px";
+		document.getElementById("hlsws").style.top = parseInt(p.top)+"px";
+	}
+	</script>
+  </body>
+</html>
